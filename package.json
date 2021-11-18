@@ -1,11 +1,24 @@
 {
-  "name": "progressive-image",
+  "name": "progressive-web-image",
   "version": "1.0.0",
+  "description": "A dead simple progressive-image module for ElvisLii JavaScript",
   "main": "./dist/index.js",
+  "types": "./lib/src/index.d.ts",
+  "module": "./lib-esm/src/index.js",
   "license": "MIT",
+  "keywords": [
+    "progressive",
+    "progressive-image",
+    "lazy-image",
+    "lazy"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ElvisLii/progressive-web-image.git"
+  },
   "scripts": {
     "dev": "webpack serve --config webpack.config.js",
-    "build": "tsc && webpack --config webpack.prod.config.js"
+    "build": "tsc && tsc -m es6 --outDir lib-esm && webpack --config webpack.prod.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.16.0",

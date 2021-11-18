@@ -6,9 +6,13 @@ module.exports = {
   mode: "production",
   entry: "./src/index.ts",
   output: {
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "dist"),
     filename: "index.js",
-    library: "pwi",
+    library: {
+      root: "pwi",
+      amd: "progressive-web-image",
+      commonjs: "progressive-web-image"
+    },
     libraryTarget: "umd",
     umdNamedDefine: true,
     globalObject: "this",

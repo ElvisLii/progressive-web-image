@@ -1,7 +1,4 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.off = exports.on = exports.throttle = void 0;
-function throttle(fn, delay) {
+export function throttle(fn, delay) {
     var _this = this;
     if (delay === void 0) { delay = 300; }
     var timeout = null;
@@ -14,13 +11,10 @@ function throttle(fn, delay) {
         }
     };
 }
-exports.throttle = throttle;
-function on(el, event, fn) {
+export function on(el, event, fn) {
     el.addEventListener(event, fn);
 }
-exports.on = on;
-function off(el, event, fn) {
+export function off(el, event, fn) {
     el.removeEventListener(event, fn);
 }
-exports.off = off;
 //# sourceMappingURL=index.js.map
