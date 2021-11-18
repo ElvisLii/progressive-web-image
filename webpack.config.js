@@ -10,7 +10,11 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
-    library: "pwi",
+    library: {
+      root: "pwi",
+      amd: "progressive-web-image",
+      commonjs: "progressive-web-image"
+    },
     libraryTarget: "umd",
   },
   module: {

@@ -15,10 +15,12 @@ export class ProgressiveImage {
     el?: string;
     removePreview?: boolean;
     lazyClass?: string;
+    scale?: boolean;
   }) {
     this.el = options.el || document;
     this.lazyClass = options.lazyClass || "lazy";
     this.removePreview = false;
+    this.scale = options.scale;
     this.events = ["scroll", "resize"];
     this.windowIsBind = false;
     this.animationEvent = this.getAnimationEvent();

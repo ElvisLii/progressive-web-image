@@ -1,8 +1,5 @@
-"use strict";
-Object.defineProperty(exports, "__esModule", { value: true });
-exports.ProgressiveImage = void 0;
-require("../styles/index.scss");
-var index_1 = require("@utils/index");
+import "../styles/index.scss";
+import { on, off, throttle } from "@utils/index";
 var ProgressiveImage = /** @class */ (function () {
     function ProgressiveImage(options) {
         var _this = this;
@@ -12,7 +9,7 @@ var ProgressiveImage = /** @class */ (function () {
         this.events = ["scroll", "resize"];
         this.windowIsBind = false;
         this.animationEvent = this.getAnimationEvent();
-        this.lazy = (0, index_1.throttle)(function () {
+        this.lazy = throttle(function () {
             _this.fire();
         });
     }
@@ -74,16 +71,16 @@ var ProgressiveImage = /** @class */ (function () {
         var _this = this;
         if (bind) {
             this.events.forEach(function (evt) {
-                (0, index_1.on)(el, evt, _this.lazy);
+                on(el, evt, _this.lazy);
             });
         }
         else {
             this.events.forEach(function (evt) {
-                (0, index_1.off)(el, evt, _this.lazy);
+                off(el, evt, _this.lazy);
             });
         }
     };
     return ProgressiveImage;
 }());
-exports.ProgressiveImage = ProgressiveImage;
+export { ProgressiveImage };
 //# sourceMappingURL=index.js.map

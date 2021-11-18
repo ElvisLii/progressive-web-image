@@ -3,7 +3,7 @@
     "outDir": "./lib",
     "noImplicitAny": true,
     "sourceMap": true,
-    "module": "es2015",
+    "module": "commonjs",
     "target": "es5",
     "allowJs": true,
     "lib": [
@@ -23,6 +23,8 @@
     "build",
     "dist",
     "out",
+    "lib",
+    "examples",
     "*.config.js"
   ]
 }
