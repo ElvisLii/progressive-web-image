@@ -2,8 +2,7 @@ const ts = require("typescript");
 const fs = require("fs");
 const path = require("path");
 
-// 简单实现返回文件夹下所有 .ts (除.d.ts) 文件函数
-// 一般会直接使用第三方插件
+// TODO: 一般会直接使用第三方插件，目前还没找到合适的
 function getFilesName(dirPath) {
   dirPath = path.resolve(dirPath);
 
@@ -58,4 +57,3 @@ function compileDTS(modules) {
 
 // 执行
 compileDTS();
-// compileDTS(false);

@@ -1,12 +1,13 @@
 {
-  "name": "progressive-web-image",
+  "name": "mini-progressive-image",
   "version": "1.0.0",
-  "description": "A dead simple progressive-image module for ElvisLii JavaScript",
-  "main": "./dist/index.js",
-  "types": "./lib/src/index.d.ts",
-  "module": "./lib-esm/src/index.js",
+  "description": "A dead Mini progressive-image module for elvisii JavaScript",
+  "main": "./lib/index.js",
+  "module": "./src/index.ts",
+  "types": "./lib/index.d.ts",
   "license": "MIT",
   "keywords": [
+    "mini",
     "progressive",
     "progressive-image",
     "lazy-image",
