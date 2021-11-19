@@ -11,18 +11,28 @@ module.exports = {
     path: path.resolve(__dirname, "dist"),
     filename: "index.js",
     library: {
-      root: "pwi",
-      amd: "progressive-web-image",
-      commonjs: "progressive-web-image"
+      root: "miniPi",
+      amd: "mini-progressive-image",
+      commonjs: "mini-progressive-image",
     },
     libraryTarget: "umd",
   },
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
-        use: ["ts-loader"],
+        test: /\.(ts)|(m?js)$/, // 多个匹配 .ts
         exclude: /node_modules/,
+        use: {
+          loader: "babel-loader",
+          // 传入配置方式 或者 创建配置文件
+          options: {
+            presets: [
+              // ["@babel/preset-env", { debug: true, targets: "ie >= 11" }],
+              "@babel/preset-typescript", // 使用插件
+            ],
+            plugins: [["@babel/plugin-transform-runtime", { corejs: 3 }]],
+          },
+        },
       },
       {
         test: /\.scss$/,
@@ -49,8 +59,8 @@ module.exports = {
     new copyWebpackPlugin({
       patterns: [
         {
-          from: 'assets',
-          to: 'assets',
+          from: "assets",
+          to: "assets",
         },
       ],
     }),
