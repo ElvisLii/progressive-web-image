@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "outDir": "./lib",
+    "outDir": "./types",
     "noImplicitAny": true,
     "sourceMap": true,
     "module": "commonjs",
@@ -11,12 +11,13 @@
       "dom",
       "es2015.promise"
     ],
+    "emitDeclarationOnly": true,
     "baseUrl": ".",
     "declaration": true,
     "moduleResolution": "node",
     "paths": {
       "baseUrl": ["."],
-      "@utils/*": ["./utils"]
+      "@utils/*": ["./utils/*"]
     }
   },
   "exclude": [

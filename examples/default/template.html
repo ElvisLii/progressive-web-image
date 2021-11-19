@@ -73,25 +73,11 @@
       <img class="preview lazy" data-src="./assets/5.jpg" src="./assets/r5.jpg" />
     </div>
 
-
-
     <div class="space"></div>
     <div class="progressive full">
       <img class="preview lazy" data-src="./assets/4.jpg" data-srcset="./assets/4.jpg 960w, ./assets/4-m.jpg 1280w, ./assets/4-l.jpg 1920w" src="./assets/r4.jpg" />
     </div>
   </main>
-  <script src="./index.js"></script>
-  <script>
-    // DEV
-    (function(){
-      new miniPi.ProgressiveImage({
-        el: '#app',
-        lazyClass: 'lazy',
-        removePreview: true,
-        scale: true
-      }).fire()
-    })()
-  </script>
 </body>
 
 </html>
