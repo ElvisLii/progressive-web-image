@@ -1,10 +1,10 @@
 {
   "compilerOptions": {
-    "outDir": "./types",
+    "outDir": "./lib",
     "noImplicitAny": true,
     "sourceMap": true,
     "module": "commonjs",
-    "target": "es5",
+    "target": "esnext",
     "allowJs": true,
     "lib": [
       "es5",
@@ -17,15 +17,8 @@
     "moduleResolution": "node",
     "paths": {
       "baseUrl": ["."],
-      "@utils/*": ["./utils/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "exclude": [
-    "build",
-    "dist",
-    "out",
-    "lib",
-    "examples",
-    "*.config.js"
-  ]
+  "include": ["src/**/*"],
 }

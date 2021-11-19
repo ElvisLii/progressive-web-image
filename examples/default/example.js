@@ -1,4 +1,5 @@
-import { ProgressiveImage } from "../../lib/src/index";
+import { ProgressiveImage } from "../../lib";
+import '../../lib/index.css'
 (() => {
   new ProgressiveImage({
     el: "#app",

@@ -8,7 +8,7 @@ module.exports = {
   entry: "./src/index.ts",
   devtool: "inline-source-map",
   output: {
-    path: path.resolve(__dirname, "dist"),
+    path: path.resolve(__dirname, "lib"),
     filename: "index.js",
     library: {
       root: "miniPi",
@@ -20,17 +20,14 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(ts)|(m?js)$/, // 多个匹配 .ts
+        test: /\.(ts)|(m?js)$/,
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-          // 传入配置方式 或者 创建配置文件
           options: {
             presets: [
-              // ["@babel/preset-env", { debug: true, targets: "ie >= 11" }],
-              "@babel/preset-typescript", // 使用插件
+              "@babel/preset-typescript",
             ],
-            plugins: [["@babel/plugin-transform-runtime", { corejs: 3 }]],
           },
         },
       },
@@ -43,7 +40,7 @@ module.exports = {
   resolve: {
     extensions: [".ts", ".tsx", ".js"],
     alias: {
-      "@utils": path.resolve(__dirname, "./utils"),
+      "@": path.resolve(__dirname, "./src"),
     },
   },
   devServer: {

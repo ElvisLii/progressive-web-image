@@ -1,5 +1,5 @@
 import "../styles/index.scss";
-import { on, off, throttle } from "@utils/index";
+import { on, off, throttle } from "@/utils";
 
 export class ProgressiveImage {
   el: string | Document;
