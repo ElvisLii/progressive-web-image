@@ -3,4 +3,8 @@ language: node_js
 node_js:
   - "14"
   - "12"
+branches:
+  only:
+  - master
+  - main  
 script: yarn run travis

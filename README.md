@@ -9,6 +9,7 @@ A dead mini progressive-image module for Elvisii TypeScript
 ## NPM
 
 [![NPM version][npm-image]][npm-url]
+[![Build Status](https://app.travis-ci.com/elvisii/mini-progressive-image.svg?branch=main)](https://app.travis-ci.com/elvisii/mini-progressive-image)
 
 [NPM - mini-progressive-image](https://github.com/elvisii/mini-progressive-image.git)
 
