@@ -1,6 +1,6 @@
 {
   "name": "mini-progressive-image",
-  "version": "1.0.0-alpha.2",
+  "version": "1.0.0",
   "description": "A dead Mini progressive-image module for elvisii TypeScript",
   "main": "./lib/index.js",
   "module": "./src/index.ts",
